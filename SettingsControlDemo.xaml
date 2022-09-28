@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="User.PluginSdkDemo.SettingsControlDemo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:styles="clr-namespace:SimHub.Plugins.Styles;assembly=SimHub.Plugins" mc:Ignorable="d"              
+             xmlns:ui="clr-namespace:SimHub.Plugins.UI;assembly=SimHub.Plugins"
+             xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:pluginsdkdemo="clr-namespace:User.PluginSdkDemo" d:DataContext="{d:DesignInstance Type=pluginsdkdemo:DataPluginDemoSettings}"
+             d:DesignHeight="400" d:DesignWidth="700">
+
+    <Grid>
+        <styles:SHSection Title="">
+
+
+
+
+
+            <StackPanel>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="30" />
+                        <RowDefinition  Height="30" />
+                        <RowDefinition  Height="30" />
+                        <RowDefinition  Height="30" />
+                        <RowDefinition  Height="30" />
+                        <RowDefinition  Height="20" />
+                        <RowDefinition  Height="30" />
+                        <RowDefinition  Height="10" />
+                        <RowDefinition  Height="50" />
+                        <RowDefinition  Height="50" />
+                        <RowDefinition  Height="30" />
+                        <RowDefinition  Height="30" />
+                        <RowDefinition  Height="30" />
+                        <RowDefinition  Height="30" />
+                        <RowDefinition  Height="30" />
+                        <RowDefinition  Height="30" />
+                        <RowDefinition  Height="30" />
+                        <RowDefinition  Height="30" />
+                        <RowDefinition  Height="30" />
+                        <RowDefinition  Height="30" />
+                        <RowDefinition  Height="30" />
+                        <RowDefinition  Height="30" />
+                        <RowDefinition  Height="30" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="0"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="285"/>
+                        <ColumnDefinition Width="250"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.ColumnSpan="6"
+
+                        FontWeight="Bold"
+                        Text="SYSTEM MONITOR"
+                        FontSize="22" Margin="0,0,284,0">
+                    </TextBlock>
+
+
+                    <TextBlock
+                        Grid.Row="2"
+  
+                        FontWeight="Bold"
+                        Text="CELCIUS"
+                        FontSize="12">
+                    </TextBlock>
+
+
+
+                    <TextBlock
+                        Grid.Row="2"
+                        Grid.Column="3"
+  
+                        FontWeight="Bold"
+                        Text="FAHRENHEIT"
+                        FontSize="12">
+                    </TextBlock>
+                    <styles:SHToggleButton
+                        Grid.Row="2"  
+                        
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Height="20"
+                        IsChecked="{Binding Path=Setting1}" Width="20">
+                    </styles:SHToggleButton>
+
+
+       
+
+
+                  
+
+
+
+                </Grid>
+            </StackPanel>
+        </styles:SHSection>
+    </Grid>
+</UserControl>
