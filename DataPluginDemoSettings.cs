@@ -12,6 +12,9 @@ namespace User.PluginSdkDemo
         public bool Setting1 { get; set; } = false;
         public bool Setting2 { get; set; } = true;
 
+        public int CPUWarning { get; set; } = 0;
+        public int GPUWarning { get; set; } = 0;
+
         // These settings are made accesssible to the user via the UI
         // They are binded to toggle switches in SettingsControlDemo.xaml
         // Settings are saved in C:\Program Files (x86)\SimHub\PluginsData\Common\PLuginNane.json whe the plugin closes

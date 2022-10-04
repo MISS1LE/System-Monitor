@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace User.PluginSdkDemo
 {
@@ -32,6 +33,22 @@ namespace User.PluginSdkDemo
         private void RadioButton_IsEnabledChanged(object sender, System.Windows.DependencyPropertyChangedEventArgs e)
         {
 
+        }
+
+        public void CPUWarningChanged(object sender, RoutedPropertyChangedEventArgs<double?> e)
+        {
+            Plugin.Settings.CPUWarning = (int)CPUWarning.Value;
+        }
+
+        public void GPUWarningChanged(object sender, RoutedPropertyChangedEventArgs<double?> e)
+        {
+            Plugin.Settings.GPUWarning = (int)GPUWarning.Value;
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            CPUWarning.Value = Plugin.Settings.CPUWarning;
+            GPUWarning.Value = Plugin.Settings.GPUWarning;
         }
     }
 }

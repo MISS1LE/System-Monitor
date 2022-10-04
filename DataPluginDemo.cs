@@ -44,7 +44,8 @@ namespace User.PluginSdkDemo
             // Define the value of our property (declared in init)
             pluginManager.SetPropertyValue("Celcius > Fahrenheit", this.GetType(), Settings.Setting1);
 
-
+            pluginManager.SetPropertyValue("CPUWarning", this.GetType(), Settings.CPUWarning);
+            pluginManager.SetPropertyValue("GPUWarning", this.GetType(), Settings.GPUWarning);
         }
 
         /// <summary>
@@ -83,16 +84,11 @@ namespace User.PluginSdkDemo
             // Declare a property available in the property list
             pluginManager.AddProperty("Celcius > Fahrenheit", this.GetType(), Settings.Setting1); // App a prop and set its default value
 
-
-
-
-
-
-
-        }
-
+            pluginManager.AddProperty("CPUWarning", this.GetType(), Settings.CPUWarning);
+            pluginManager.AddProperty("GPUWarning", this.GetType(), Settings.GPUWarning);
         }
     }
+}
    
     
     

@@ -7,7 +7,7 @@
              xmlns:ui="clr-namespace:SimHub.Plugins.UI;assembly=SimHub.Plugins"
              xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls"
              xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:pluginsdkdemo="clr-namespace:User.PluginSdkDemo" d:DataContext="{d:DesignInstance Type=pluginsdkdemo:DataPluginDemoSettings}"
-             d:DesignHeight="400" d:DesignWidth="700">
+             d:DesignHeight="400" d:DesignWidth="700" Loaded="UserControl_Loaded">
 
     <Grid>
         <styles:SHSection Title="">
@@ -92,10 +92,18 @@
                     </styles:SHToggleButton>
 
 
-       
+
+                    <Label FontWeight="Bold" Grid.Row="3" Width="395" Height="30" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-10,0,0,0">CPU WARNING</Label>
+                    <Custom:NumericUpDown x:Name="CPUWarning" HasDecimals="False" ValueChanged="CPUWarningChanged" Grid.Row="3"
+                              ToolTip="The value at which the plugin will start warning about CPU"
+                              Grid.Column="4" Minimum="10" Maximum="200" Margin="2"/>
+
+                    <Label FontWeight="Bold" Grid.Row="4" Width="395" Height="30" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-10,0,0,0">GPU WARNING</Label>
+                    <Custom:NumericUpDown x:Name="GPUWarning" HasDecimals="False" ValueChanged="GPUWarningChanged" Grid.Row="4"
+                              ToolTip="The value at which the plugin will start warning about GPU"
+                              Grid.Column="4" Minimum="10" Maximum="200" Margin="2"/>
 
 
-                  
 
 
 
